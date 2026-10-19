@@ -1,0 +1,6 @@
+# Dépendances d'exécution. Toutes installables via pip dans un venv,
+# sans sudo ni apt. Les wheels embarquent leurs bibliothèques natives
+# (Qt pour PySide6, ffmpeg/libav pour PyAV via faster-whisper).
+faster-whisper>=1.1.0
+PySide6>=6.6
+python-docx>=1.1

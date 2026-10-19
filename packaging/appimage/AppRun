@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#
+# Script de démarrage exécuté quand l'utilisateur lance l'AppImage.
+# Il pointe l'interpréteur Python embarqué vers le code de l'application.
+#
+set -euo pipefail
+HERE="$(dirname "$(readlink -f "$0")")"
+
+export PYTHONHOME="$HERE/usr"
+export PYTHONDONTWRITEBYTECODE=1
+# Qt (PySide6) : évite les conflits avec d'éventuels plugins système.
+export QT_PLUGIN_PATH=""
+# Bibliothèques xcb/xkb embarquées : indispensables pour le plugin « xcb »
+# de Qt 6.5+ (ex. libxcb-cursor.so.0) sur les postes où elles sont absentes.
+export LD_LIBRARY_PATH="$HERE/usr/lib/x11:${LD_LIBRARY_PATH:-}"
+
+exec "$HERE/usr/bin/python3" -m audiototext "$@"

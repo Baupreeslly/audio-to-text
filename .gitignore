@@ -1,0 +1,26 @@
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Artefacts de packaging
+*.AppImage
+packaging/appimage/*.AppDir/
+appimage-build/
+
+# Modèles téléchargés (peuvent peser plusieurs Go)
+models/
+*.bin
+
+# Divers
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Audio → Texte
+GenericName=Transcription audio
+Comment=Transcrit un fichier audio en texte, entièrement hors ligne
+Exec=AppRun %f
+Icon=audio-to-text
+Categories=AudioVideo;Utility;Accessibility;
+Terminal=false
+MimeType=audio/mpeg;audio/x-wav;audio/mp4;audio/ogg;audio/flac;
+Keywords=audio;texte;transcription;whisper;sous-titres;
